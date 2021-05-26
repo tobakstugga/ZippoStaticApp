@@ -1,0 +1,16 @@
+﻿@page "/test"
+
+<h1>Second</h1>
+
+<p>Current second: @_second</p>
+
+<button class="btn btn-primary" @onclick="IncrementSecond">How about now ?</button>
+
+@code {
+    private int _second = DateTime.Now.Second;
+
+    private void IncrementSecond()
+    {
+        _second= DateTime.Now.Second;
+    }
+}
